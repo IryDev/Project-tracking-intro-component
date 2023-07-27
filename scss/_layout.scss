@@ -1,17 +1,138 @@
-header{
+@use 'base';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  margin-bottom: 3rem;
+
+  nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 4rem;
+  }
 
-    nav ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  nav li {
+    margin-left: 2rem;
+    text-transform: uppercase;
+  }
+
+  nav a{
+    color: base.$Very-Dark-Blue;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 6rem 0;
+}
+
+.main__container__left {
+  margin-left: 4rem;
+}
+
+.main__container__right{
+  position: absolute;
+  right: -20rem;
+
+  img{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 968px) {
+
+  .open{
+    top: 6rem;
+  }
+
+  .burger-open img{
+    content: url("../images/icon-close.svg");
+  }
+
+
+  header nav {
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    margin: auto;
+    transition: .5s all;
+
+    padding: 1rem 0;
+    top: -30rem ;
+    border-radius: 10px;
+    box-shadow: 0px 0 15px 5px 
+     rgba(0, 0, 0, 0.311);
+    position: absolute;
+    ul{
+      flex-direction: column;
+    }
+    li{
+      margin-bottom: 1rem;
+      margin-left: inherit;
     }
 
-    nav li{
-        margin-left: 2rem;
-        text-transform: uppercase;
+
+  }
+
+  .main__container__right{
+    margin-bottom: 4rem;
+  }
+
+  header{
+
+    padding: 2rem 2rem;
+  }
+
+  header .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .main__container__right{
+  position: static;
+  right: inherit;
+
+  img{
+    position: relative;
+    right: -2rem;
+    width: 150%;
+  }
+}
+
+  .main__container {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main__container__left{
+    margin: 0 2rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  h2{
+    font-size: .9rem;
+  }
+
+  .cta{
+    font-size: 0.9rem;
+
+    button{
+      letter-spacing: .1px;
     }
+  }
 }
