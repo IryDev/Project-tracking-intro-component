@@ -38,6 +38,7 @@ h2 {
   color: hsl(231, 7%, 65%);
   letter-spacing: 4px;
   font-family: "Barlow";
+  font-weight: 400;
 }
 h2 span {
   background-color: hsl(230, 29%, 20%);
@@ -70,31 +71,6 @@ p {
   color: hsl(231, 7%, 65%);
 }
 
-button {
-  background-color: hsl(0, 100%, 68%);
-  padding: 0.7rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: white;
-  display: inline;
-  font-size: 1rem;
-  font-family: "Barlow Condensed";
-  letter-spacing: 2px;
-}
-
-.background {
-  width: 50vw;
-  background-color: hsl(207, 33%, 95%);
-  height: 50vh;
-  position: absolute;
-  border-radius: 0 0 0 50px;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -114,8 +90,49 @@ header nav li {
 header nav a {
   color: hsl(230, 29%, 20%);
 }
+header nav a:hover {
+  text-decoration: underline;
+}
 header .hamburger {
   display: none;
+}
+header .line {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: hsl(231, 7%, 65%);
+}
+header .login {
+  color: hsl(231, 7%, 65%);
+}
+
+button {
+  background-color: hsl(0, 100%, 68%);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  display: inline;
+  font-size: 1rem;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: inset 0 0 200px rgba(255, 255, 255, 0.304);
+}
+
+.background {
+  width: 50vw;
+  background-color: hsl(207, 33%, 95%);
+  height: 50vh;
+  position: absolute;
+  border-radius: 0 0 0 50px;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 main {
@@ -145,6 +162,10 @@ main {
   .open {
     top: 6rem;
   }
+  header .line {
+    width: 100%;
+    height: 1px;
+  }
   .burger-open img {
     content: url("../images/icon-close.svg");
   }
@@ -153,11 +174,13 @@ main {
     width: 85%;
     margin: auto;
     transition: 0.5s all;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     top: -30rem;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0 15px 5px rgba(0, 0, 0, 0.311);
     position: absolute;
+    left: 0;
+    right: 0;
   }
   header nav ul {
     flex-direction: column;

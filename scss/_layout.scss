@@ -1,32 +1,5 @@
 @use 'base';
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 4rem;
-  margin-bottom: 3rem;
-
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  nav li {
-    margin-left: 2rem;
-    text-transform: uppercase;
-  }
-
-  nav a{
-    color: base.$Very-Dark-Blue;
-  }
-
-  .hamburger {
-    display: none;
-  }
-}
-
 main {
   height: 100%;
   display: flex;
@@ -57,6 +30,11 @@ main {
     top: 6rem;
   }
 
+  header .line{
+    width: 100%;
+    height: 1px;
+  }
+
   .burger-open img{
     content: url("../images/icon-close.svg");
   }
@@ -68,12 +46,14 @@ main {
     margin: auto;
     transition: .5s all;
 
-    padding: 1rem 0;
+    padding: 1rem 1rem;
     top: -30rem ;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0 15px 5px 
      rgba(0, 0, 0, 0.311);
     position: absolute;
+    left: 0;
+    right: 0;
     ul{
       flex-direction: column;
     }
@@ -81,7 +61,6 @@ main {
       margin-bottom: 1rem;
       margin-left: inherit;
     }
-
 
   }
 

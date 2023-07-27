@@ -1,0 +1,42 @@
+@use 'base';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  margin-bottom: 3rem;
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav li {
+    margin-left: 2rem;
+    text-transform: uppercase;
+  }
+
+  nav a{
+    color: base.$Very-Dark-Blue;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .line{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: base.$Grayish-Blue;
+  }
+
+  .login{
+    color: base.$Grayish-Blue;
+  }
+}
